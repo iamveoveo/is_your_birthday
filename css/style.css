@@ -3,6 +3,8 @@
     src: url(../CSS/font/roboto/RobotoCondensed-Regular.ttf);
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Yanone+Kaffeesatz&display=swap');
+
 *{
     font-family: "Roboto-Condensed",sans-serif;
     padding: 0px;
@@ -34,4 +36,8 @@ a{
 a:hover{
     text-decoration: none;
     color: #000;
+}
+
+.hidden{
+    display: none !important;
 }
