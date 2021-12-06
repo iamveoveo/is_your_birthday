@@ -35,7 +35,7 @@ const PLAYER = 2
 const EXIT = 3
 const EXIT_READY = 6
 const DIAMOND = 4
-const DIAMOND_COUNT = 5
+const DIAMOND_COUNT = 7
 
 const DOWN = 40
 const UP = 38
@@ -172,19 +172,23 @@ const changePlayerPos = (direction) => {
                 bag++
                 switch (bag) {
                     case 1:
-                        wish='Chúc 1'; break;
+                        wish='Deal ÁNh. <br>Tớ viết thư này ... như trẻ con vậy nhưng mà V muốn ước cho ÁNh thật nhiều điều lành vào cái tuổi 20 mơn mởn này. Nhưng viết nhiều sợ ÁNh đấm bỏ mịa.'; break;
                     case 2:
-                        wish='Chúc 2'; break;
+                        wish='V ước cho với cái tủi 20 mới mới mới này ÁNh sẽ đầu tiên là có cái thành tựu gì đó lớn lớn cho tự tin nghĩ mình "bố thiên hạ" hihi.'; break;
                     case 3:
-                        wish='Chúc 3'; break;
+                        wish='Ước cho ÁNh được bớt đi thời gian rảnh được đụng tay đụng chân cho đỡ "trông như nghiện" nữa.'; break;
                     case 4:
-                        wish='Chúc 4'; break;
+                        wish='V hay khen là ÁNh xinh gái ÁNh đáng yêu nên ước chắc là sẽ phải ước cho V có trái tim khỏe một chút ÁNh cười không ngộp quá vì năm sau ÁNh còn xinh hơn cơ.'; break;
                     case 5:
-                        wish='Chúc 5'; break;
+                        wish='Rồi V sẽ ước điều này đừng để bụng nghen. Ước cho Ánh cứng vía hơn để mấy đứa bạn đểu biết đường mà né. Nếu điều ước đấy không được đáp ứng V sẽ ước cho V với ÁNh ở thật lâu bên nhau để mấy cái "bạn xấu" không dám le ve nữa.'; break;
+                    case 6:
+                        wish='Ước cho ÁNh sẽ luôn giữ đc sự tỉnh tảo như cái biệt danh vậy "Tập trung vào!!!". Hihi còn nhiều nhiều nữa V sẽ để để ước dần ước trong tâm niệm.'; break;
+                    case 7:
+                        wish='hí hí dạo này văn kém quá không biết nghe có xáo rỗng không nữa. Tuổi 20 thật đẹp nghen ÁNh yêu dấu <3. <br>Thân ái! <br>Đặng Quang Vinh'; break;
                     default:
                         wish='je t`aime'; break;
                 }
-                $('.wish-contain p').text(wish);
+                $('.wish-contain p').html(wish);
                 overlay()
             }
             
