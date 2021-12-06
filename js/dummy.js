@@ -1109,13 +1109,17 @@ class Background extends Entity {
 // Canvas
 //*‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡*/
 
+var gradient = canvas.getContext('2d').createLinearGradient(0,0, window.innerWidth, window.innerWidth);
+gradient.addColorStop(0, '#23A6D5');
+gradient.addColorStop(1, '#E73C7E');
+
 class Canvas {
     constructor({ canvas, entities = [], pointer }) {
         // setup a canvas
         this.canvas = canvas;
         this.dpr = window.devicePixelRatio || 1;
         this.ctx = canvas.getContext('2d');
-        this.ctx.scale(this.dpr, this.dpr);
+        this.ctx.scale(this.dpr, this.dpr);    
 
         // tick counter
         this.tick = 0;
@@ -1178,6 +1182,8 @@ const bottomCenter = new Point(
 
 const width = Math.max(window.innerWidth, window.innerHeight) / 15 * DPR;
 
+
+
 const color = {
     bg: '#F4F3EE',
     dude1: '#E59090',
@@ -1198,7 +1204,7 @@ new Canvas({
             position: bottomCenter.clone().move(window.innerWidth / 6 * DPR, 0),
             color: color.dude1,
             width,
-            height: window.innerHeight * 0.5 * DPR,
+            height: window.innerHeight * 0.35 * DPR,
             mouthColor: color.mouthColor,
             pupilColor: color.pupilColor,
         }),
@@ -1208,7 +1214,7 @@ new Canvas({
                 .move(-window.innerWidth / 6 * DPR, 0),
             color: color.dude2,
             width,
-            height: window.innerHeight * 0.55 * DPR,
+            height: window.innerHeight * 0.35 * DPR,
             mouthColor: color.mouthColor,
             pupilColor: color.pupilColor,
         }),
@@ -1216,7 +1222,7 @@ new Canvas({
             position: bottomCenter,
             color: color.dude3,
             width,
-            height: window.innerHeight * 0.6 * DPR,
+            height: window.innerHeight * 0.4 * DPR,
             mouthColor: color.mouthColor,
             pupilColor: color.pupilColor,
         }),

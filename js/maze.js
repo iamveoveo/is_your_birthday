@@ -76,7 +76,7 @@ const createBoard = () => {
 
 const renderMaze = () => {
     if (bag < DIAMOND_COUNT) {
-        document.querySelector('.info').textContent = 'collect all the gems'
+        document.querySelector('.info').textContent = 'collect all the cake'
     } else {
         maze[ROWS-1][COLS-1] = EXIT_READY
         document.querySelector('.info').textContent = 'go to the teleport'
@@ -112,7 +112,7 @@ const renderMaze = () => {
     }
     else {
         document.querySelector(id).className = 'block player bye'
-        document.querySelector('.info').textContent = 'bye!'
+        document.querySelector('.info').textContent = 'wait!'
     }
 
 
@@ -160,6 +160,13 @@ const changePlayerPos = (direction) => {
         maze[y][x] !== WALL) {
             player = [y, x]
 
+            if (maze[y][x] == EXIT_READY){
+                $('.wrap-end').css('animation', 'fadein 0.5s');
+                setTimeout(function(){
+                    $('.wrap-end').removeClass('hidden');
+                }, 500);
+            }
+
             if (maze[y][x] === DIAMOND) {
                 maze[y][x] = EMPTY
                 bag++
@@ -193,16 +200,16 @@ function overlay(){
 
 $(document).ready(function(){
     $(window).on('click', function(){
-        $('.wish-section').css('animation', 'fadeout 1.5s');
-        $('.overlay').css('animation', 'fadeout 1.5s');
-        $('.starter').css('animation', 'fadeout 1.5s');
+        $('.wish-section').css('animation', 'fadeout 0.5s');
+        $('.overlay').css('animation', 'fadeout 0.5s');
+        $('.starter').css('animation', 'fadeout 0.5s');
         setTimeout(function(){
             $('.wish-section').addClass('hidden');
             $('.overlay').addClass('hidden');
             $('.starter').addClass('hidden');
-            $('.wish-section').css('animation', 'fadein 1.5s');
-            $('.overlay').css('animation', 'fadein 1.5s');
-            $('.starter').css('animation', 'fadein 1.5s');
-        }, 1500);
+            $('.wish-section').css('animation', 'fadein 1s');
+            $('.overlay').css('animation', 'fadein 1s');
+            $('.starter').css('animation', 'fadein 1s');
+        }, 500);
     })
 })
