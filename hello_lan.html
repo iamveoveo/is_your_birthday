@@ -12,15 +12,35 @@
     <title>SWEET WISHES</title>
 </head>
 <body>
+
+    <div class="overlay"></div>
+
+    <div class="position-absolute character appearFromRight" name="piggy" id="piggy" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        <div class="position-relative">
+            <img class="standRotateABit" width="120px" src="images/piggy.png" alt="piggy">
+        </div>
+    </div>
+    <div class="position-absolute character appearFromLeft" name="flower" id="flower">
+        <div class="position-relative">
+            <img class="standRotateAround" width="100px" src="images/flower.png" alt="flower">
+        </div>
+    </div>
+    <div class="position-absolute character appearFromLeft" name="roof" id="roof" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        <div class="position-relative">
+            <img class="standUpAndDown" width="120px" src="images/roof.png" alt="roof">
+        </div>
+    </div>
+    <div class="position-absolute character appearFromRight" name="poke" id="poke" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        <div class="position-relative">
+            <img class="standHandMove" width="100px" src="images/poke.png" alt="poke">
+        </div>
+    </div>
+
 <!--
 autor: Marco Barría
 https://twitter.com/marco_bf
 -->
 
-<div class="pt-5 position-relative">
-    <div class="character">
-        <img width="33%" src="images/piggy.png" alt="piggy">
-    </div>
     <div class="velas">
         <div class="fuego"></div>
         <div class="fuego"></div>
@@ -28,7 +48,7 @@ https://twitter.com/marco_bf
         <div class="fuego"></div>
         <div class="fuego"></div>
     </div>
-    <svg id="cake" version="1.1" x="0px" y="0px" width="200px" height="500px" viewBox="0 0 200 500" enable-background="new 0 0 200 500" xml:space="preserve">
+    <svg id="cake" version="1.1" x="0px" y="0px" width="200px" height="425px" viewBox="0 0 200 500" enable-background="new 0 0 200 500" xml:space="preserve">
         <path fill="#a88679" d="M173.667-13.94c-49.298,0-102.782,0-147.334,0c-3.999,0-4-16.002,0-16.002
             c44.697,0,96.586,0,147.334,0C177.667-29.942,177.668-13.94,173.667-13.94z">
             <animate id="bizcocho_3" attributeName="d" calcMode="spline" keySplines="0 0 1 1; 0 0 1 1" begin="relleno_2.end" dur="0.3s" fill="freeze" values="
@@ -180,8 +200,23 @@ https://twitter.com/marco_bf
         <h1>happy birthday!</h1>
         <p>Lan</p>
     </div>
-</div>
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="wish-section">
+                        <button type="button" class="btn-close position-absolute" style="top:0;right:0;" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="wish-contain">
+                            <p id="wish"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+<script src="js/hello_lan.js"></script>
 </html>

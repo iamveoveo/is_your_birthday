@@ -16,6 +16,10 @@ body {
   margin: -10em auto 0 auto;
 }
 
+.hidden{
+    display: none !important;
+}
+
 /* ============================================== Candle
 */
 
@@ -23,7 +27,7 @@ body {
   background: #ffffff;
   border-radius: 10px;
   position: absolute;
-  top: 275px;
+  top: 160px;
   left: 50%;
   margin-left: -2.4px;
   margin-top: -8.33333333px;
@@ -112,12 +116,156 @@ body {
     font-size: 1.4em;
 }
 
-/* ============================================== Characters
+/* ============================================== Character
 */
 
 .character {
-    position: absolute;
-    top: 50%;
+
+}
+
+#piggy {
+    top: 70%;
     left: 50%;
-    transform: translate(-50%, -50%);
+}
+
+#flower {
+    top: 65%;
+    left: 10%;
+}
+
+#roof {
+    top: 10%;
+    left: 10%;
+}
+
+#poke {
+    top: 25%;
+    left: 65%;
+}
+
+.standUpAndDown {
+    animation-name: standUpAndDown ;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.standRotateABit {
+    animation-name: standRotateABit ;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.standHandMove {
+    animation-name: standHandMove ;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.standRotateAround {
+    animation-name: standRotateAround ;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+.appearFromLeft {
+    animation-name: appearFromLeft ;
+    animation-duration: 1s;
+}
+
+.appearFromRight {
+    animation-name: appearFromRight ;
+    animation-duration: 1s;
+}
+
+/* ============================================== Animation Character
+*/
+
+@keyframes standUpAndDown {
+    0% {padding-top: 0%}
+    50% {padding-top: 10%}
+    100% {padding-top: 0%}
+}
+
+@keyframes standRotateABit {
+    0% {transform: rotate(-15deg)}
+    50% {transform: rotate(00deg)}
+    100% {transform: rotate(-15deg)}
+}
+
+@keyframes standRotateAround {
+    0% {transform: rotate(0deg)}
+    20% {transform: rotate(15deg)}
+    45% {transform: rotate(0deg)}
+    65% {transform: rotate(-15deg)}
+    80% {transform: rotate(0deg)}
+    100% {transform: rotate(360deg)}
+}
+
+@keyframes standHandMove {
+    0% {
+        transform: rotate(-10deg);
+        margin-left: -8%;
+    }
+    50% {
+        transform: rotate(10deg);
+        margin-left: 15%;
+    }
+    100% {
+        transform: rotate(-10deg);
+        margin-left: -8%;
+    }
+}
+
+@keyframes appearFromLeft {
+    0% {
+        transform: translate(-50%, 0%);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0%, 0%);
+        opacity: 1;
+    }
+}
+
+@keyframes appearFromRight {
+    0% {
+        transform: translate(50%, 0%);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0%, 0%);
+        opacity: 1;
+    }
+}
+
+/* ============================================== Wishes
+*/
+
+.wish-section{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 11;
+    border-radius: 10px;
+    border: 3px solid rgb(255, 227, 70);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/930847.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.wish-contain{
+    background-color: #ffffffe0;
+    padding: 20px;
+    max-width: 400px;
+}
+
+.wish-contain p{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 20px;
+    text-align: center;
 }

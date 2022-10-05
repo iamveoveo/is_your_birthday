@@ -200,7 +200,7 @@ const changePlayerPos = (direction) => {
 function overlay(){
     $('.wish-section').removeClass('hidden');
     $('.overlay').removeClass('hidden');
-}
+}   
 
 $(document).ready(function(){
     $(window).on('click', function(){
